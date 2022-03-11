@@ -14,7 +14,7 @@ namespace SimulationComplexité.Simulation
             _sortie = sortie;
             _simulateurLancer = simulateurLancer;
             _paramètres = paramètres;
-            _stratégieQualité = stratégieQualité;
+            _stratégieQualité = new ProtectionStratégieQualité(stratégieQualité);
         }
 
         public RésultatPartie Jouer()
