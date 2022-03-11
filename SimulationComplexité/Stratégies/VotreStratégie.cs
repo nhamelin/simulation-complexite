@@ -1,4 +1,4 @@
-﻿using SimulationComplexité.Simulation;
+﻿using SimulationComplexité.Simulation.Stratégie;
 
 namespace SimulationComplexité.Stratégies
 {
@@ -10,5 +10,8 @@ namespace SimulationComplexité.Stratégies
             // BON COURAGE
             throw new NotImplementedException();
         }
+
+        /// <inheritdoc />
+        public IStratégieQualité Fork() => new VotreStratégie();
     }
 }
