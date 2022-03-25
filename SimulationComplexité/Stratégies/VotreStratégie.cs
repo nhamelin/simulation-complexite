@@ -11,11 +11,16 @@ namespace SimulationComplexité.Stratégies
             uint scoreProduitActuel,
             ushort coutDUnDé)
         {
+
+            uint montantInvestiEnQUalité;
+            uint valeurInvestissableEnProduit = valeurProduiteBrute - complexitéAccidentelleActuelle;
+
+
             if (complexitéAccidentelleActuelle < valeurProduiteBrute)
             {
-                var valeurInvestissableEnProduit = valeurProduiteBrute - complexitéAccidentelleActuelle;
+                montantInvestiEnQUalité = complexitéAccidentelleActuelle + valeurInvestissableEnProduit / 2;
 
-                return complexitéAccidentelleActuelle + valeurInvestissableEnProduit / 2;
+                return montantInvestiEnQUalité;
             }
             else
             {
@@ -23,16 +28,22 @@ namespace SimulationComplexité.Stratégies
                 {
                     if (complexitéAccidentelleActuelle < 5)
                     {
-                        return valeurProduiteBrute;
+                        montantInvestiEnQUalité = valeurProduiteBrute;
+
+                        return montantInvestiEnQUalité;
                     }
                     else
                     {
-                        return valeurProduiteBrute / 2;
+                        montantInvestiEnQUalité = valeurProduiteBrute / 2;
+
+                        return montantInvestiEnQUalité;
                     }
                 }
                 else
                 {
-                    return valeurProduiteBrute / 2;
+                    montantInvestiEnQUalité = valeurProduiteBrute / 2;
+
+                    return montantInvestiEnQUalité;
                 }
 
             }     
