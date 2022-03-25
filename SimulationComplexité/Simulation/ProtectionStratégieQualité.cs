@@ -1,4 +1,6 @@
-﻿namespace SimulationComplexité.Simulation
+﻿using SimulationComplexité.Simulation.Stratégie;
+
+namespace SimulationComplexité.Simulation
 {
     internal class ProtectionStratégieQualité : IStratégieQualité
     {
@@ -36,5 +38,8 @@
 
             return montantRenvoyé;
         }
+
+        /// <inheritdoc />
+        public IStratégieQualité Fork() => new ProtectionStratégieQualité(_aProtéger.Fork());
     }
 }

@@ -1,4 +1,5 @@
-﻿using SimulationComplexité.Sortie;
+﻿using SimulationComplexité.Simulation.Stratégie;
+using SimulationComplexité.Sortie;
 
 namespace SimulationComplexité.Simulation
 {
@@ -9,7 +10,10 @@ namespace SimulationComplexité.Simulation
         private readonly ParamètresPartie _paramètres;
         private readonly IStratégieQualité _stratégieQualité;
 
-        public Partie(ISortiePartie sortie, Dés6Faces simulateurLancer, ParamètresPartie paramètres, IStratégieQualité stratégieQualité)
+        public Partie(ISortiePartie sortie, 
+            Dés6Faces simulateurLancer, 
+            ParamètresPartie paramètres, 
+            IStratégieQualité stratégieQualité)
         {
             _sortie = sortie;
             _simulateurLancer = simulateurLancer;
