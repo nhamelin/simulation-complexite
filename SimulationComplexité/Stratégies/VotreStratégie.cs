@@ -15,7 +15,6 @@ namespace SimulationComplexité.Stratégies
             uint montantInvestiEnQUalité;
             uint valeurInvestissableEnProduit = valeurProduiteBrute - complexitéAccidentelleActuelle;
 
-
             if (complexitéAccidentelleActuelle < valeurProduiteBrute)
             {
                 montantInvestiEnQUalité = complexitéAccidentelleActuelle + valeurInvestissableEnProduit / 2;
@@ -32,10 +31,14 @@ namespace SimulationComplexité.Stratégies
 
                         return montantInvestiEnQUalité;
                     }
-                    else
+                    else if(complexitéAccidentelleActuelle < 10)
                     {
                         montantInvestiEnQUalité = valeurProduiteBrute / 2;
 
+                        return montantInvestiEnQUalité;
+                    } else
+                    {
+                        montantInvestiEnQUalité = valeurProduiteBrute / 3;
                         return montantInvestiEnQUalité;
                     }
                 }
